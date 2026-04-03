@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #49696D;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.shopping-cart {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 15px;
+}
+
+.image.cart {
+  width: 50px;
+  height: 50px;
+}
+
+nav > img {
+  width: 110px;
+  height: 76px;
+  position: absolute;
+  right: 782px;
+  animation-name: move;
+  animation-duration: 5.4s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.name_page {
+  margin-right: 300px;
+  text-align: center;
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.2rem;
+  position: absolute;
+  top: 0;
+  right: 390px;
+  animation-name: moving;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+} 
+
+@keyframes moving {
+  from {
+    top: -90px;
+  }
+  
+  to {
+    top: 10px;
+  }
+}
+
+
+nav > a {
+  margin-right: 30px;
+  font-size: 1.5rem;
+  color: aliceblue;
+  z-index: 2;
+  text-decoration: none;
+  animation-name: moving-item;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+}
+
+@keyframes moving-item {
+  from {
+    transform: translateX(-1500px);
+  }
+  
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.nav-item:hover {
+  color: rgb(38, 103, 253);
+  text-shadow: 2px 2px black;
+}
+
+.container {
+  width: 100%;
+  height: 830px;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  background-image: url(/ASSETS/41299-dios_de_la_guerra_ii-3840x2160.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.box_form {
+  width: 40%;
+  height: 500pxvh;
+  background-image: url(/ASSETS/voluta-antigua-del-pergamino-en-fondo-negro-105114263.webp);
+  background-position: center;
+  background-size: cover;
+}

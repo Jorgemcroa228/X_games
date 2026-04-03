@@ -22,6 +22,19 @@ nav {
   align-items: center;
 }
 
+.shopping-cart {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 15px;
+  color: #006316;
+}
+
+.image.cart {
+  width: 50px;
+  height: 50px;
+}
+
 nav > img {
   width: 125px;
   height: 80px;
@@ -239,12 +252,27 @@ nav > a {
   width: 100%;
 }
 
-.buy-game {
-  margin-top: 49px;
-  padding: 8px 14px;
-  text-decoration: none;
-  font-size: 1.4rem;
-  background-color: rgb(123, 197, 12);
-  color: black;
-  border-radius: 6px;
+#enviar {
+  margin: 40px;
+  padding: 9px 21px;
+  font-size: 18px;
+  color: #000;
+  background-color: #00D42E;
+  border: none;
+  border-bottom: 4px solid #006316;
+  border-radius: 7px;
+  box-shadow: 0 3px 3px  #000000;
+}
+
+#enviar:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.boton {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
