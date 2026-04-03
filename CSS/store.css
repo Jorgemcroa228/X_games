@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1980px;
+  background-color: black;
+  color: white;
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #512183;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.shopping-cart {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 15px;
+}
+
+.image.cart {
+  width: 50px;
+  height: 50px;
+}
+
+nav > img {
+  width: 115px;
+  height: 80px;
+  position: absolute;
+  right: 804px;
+  animation-name: move;
+  animation-duration: 5.4s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.name_page {
+  margin-right: 300px;
+  text-align: center;
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.2rem;
+  position: absolute;
+  top: 0;
+  right: 390px;
+  animation-name: moving;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+} 
+
+@keyframes moving {
+  from {
+    top: -90px;
+  }
+  
+  to {
+    top: 10px;
+  }
+}
+
+
+nav > a {
+  margin-right: 30px;
+  font-size: 1.5rem;
+  color: aliceblue;
+  z-index: 2;
+  text-decoration: none;
+  animation-name: moving-item;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+}
+
+@keyframes moving-item {
+  from {
+    transform: translateX(-1500px);
+  }
+  
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.nav-item:hover {
+  color: rgb(38, 103, 253);
+  text-shadow: 2px 2px black;
+}
+
+.box-games {
+  width: 1400px;
+  height: 1600px;
+  background-color: #00D42E;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 600px;
+  left: 50px;
+  flex-wrap: wrap;
+}
+
+.gamecard {
+  margin: 0 20px;
+  padding-top: 20px;
+  width: 300px;
+  height: 540px;
+  background-color: rgb(56, 56, 56);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.image {
+  position: relative;
+  width: 250px;
+  transition: all 1s ease;
+}
+
+.background {
+  width: 250px;
+  height: 400px;
+}
+
+.image img:last-child {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 1s ease;
+  opacity: 0;
+}
+
+.image:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.image::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0) 95%);
+  opacity: 0;
+  transition: all 1s ease;
+  box-shadow: 0 20px 20px 20px rgba(3, 17, 127, 0.5);
+}
+
+.image:hover::before {
+  opacity: 1;
+}
+
+.image:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+.image img:first-child {
+  box-shadow: 0 5px 5px 5px rgba(2, 17, 130, 0.5);
+  border-radius: 6px;
+  object-fit: cover;
+  width: 100%;
+}
+
+#enviar {
+  margin: 40px;
+  padding: 9px 21px;
+  font-size: 18px;
+  color: #000;
+  background-color: #00D42E;
+  border: none;
+  border-bottom: 4px solid #006316;
+  border-radius: 7px;
+  box-shadow: 0 3px 3px  #000000;
+}
+
+#enviar:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.boton {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
