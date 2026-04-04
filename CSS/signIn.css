@@ -124,4 +124,43 @@ nav > a {
   background-image: url(/ASSETS/voluta-antigua-del-pergamino-en-fondo-negro-105114263.webp);
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.storage {
+  width: 340px;
+  height: 36px;
+  margin: 20px 2px;
+  padding: 4px 15px;
+  background-color: rgb(246, 230, 209);
+  border: none;
+  border-radius: 3px;
+}
+
+.enviar {
+  margin: 40px;
+  padding: 9px 21px;
+  font-size: 18px;
+  color: #000;
+  background-color: #0138ff;
+  border: none;
+  border-bottom: 4px solid #002861;
+  border-radius: 7px;
+  box-shadow: 0 3px 3px  #000000;
+}
+
+.enviar:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.boton {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
