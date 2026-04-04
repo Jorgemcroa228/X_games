@@ -109,8 +109,7 @@ nav > a {
 
 .box-games {
   width: 1400px;
-  height: 1600px;
-  background-color: #00D42E;
+  height: 1900px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -195,7 +194,7 @@ nav > a {
   color: #000;
   background-color: #00D42E;
   border: none;
-  border-bottom: 4px solid #006316;
+  border-bottom: 4px solid #015914;
   border-radius: 7px;
   box-shadow: 0 3px 3px  #000000;
 }
