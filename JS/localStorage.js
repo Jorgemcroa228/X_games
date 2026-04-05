@@ -1,15 +1,27 @@
 const d = document;
 
-const storageInput = d.querySelector('.storage');
+const storageInputs = d.querySelectorAll('.storage');
 const button = d.querySelector('.enviar');
-const storedInput = localStorage.getItem('textinput');
+
+storageInputs.forEach((input, index) => {
+  const storedValue = localStorage.getItem(`textinput${index}`);
+  if (storedValue) {
+    input.value = storedValue;
+  }
+});
 
 const saveToLocalStorage = () => {
-  localStorage.setItem('textinput', Text.textContent)
-}
+  storageInputs.forEach((input, index) => {
+    localStorage.setItem(`textinput${index}`, input.value);
+  });
+};
 
-if(storageInput) {
-  text.textContent = storedInput
-}
+button.addEventListener('click', saveToLocalStorage);
 
-button.addEventListener('click',  saveToLocalStorage) 
+button.addEventListener('click', function(){
+  button.textContent = 'Guardado';
+  button.style.backgroundColor = 'red';
+  button.disabled = true;
+  button.style.borderBottom = '4px solid #6d0000';
+})
+

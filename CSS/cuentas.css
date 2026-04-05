@@ -4,7 +4,7 @@
 }
 
 body {
-  height: 980px;
+  height: 500px;
   background-color: black;
   color: white;
   font-family: "Bungee", sans-serif;
@@ -105,4 +105,47 @@ nav > a {
 .nav-item:hover {
   color: rgb(38, 103, 253);
   text-shadow: 2px 2px black;
+}
+
+.accounts {
+  margin: 30px auto;
+  width: 50%;
+  height: 500px;
+  background-color: #006316;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_account {
+  
+}
+
+
+
+
+#enviar {
+  margin: 40px;
+  padding: 9px 21px;
+  font-size: 18px;
+  color: #000;
+  background-color: #00D42E;
+  border: none;
+  border-bottom: 4px solid #006316;
+  border-radius: 7px;
+  box-shadow: 0 3px 3px  #000000;
+}
+
+#enviar:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.boton {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
