@@ -110,16 +110,23 @@ nav > a {
 .accounts {
   margin: 30px auto;
   width: 50%;
-  height: 500px;
-  background-color: #006316;
+  height: 550px;
+  background-color: #03233c70;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 11px;
 }
 
 .img_account {
-  
+  margin-top: 10px;
+  width: 80%;
+  height: 300px;
+  background-image:url(/ASSETS/455ca5fbddbef43bacd8d8c3f91f6dbb0e2dee372cddfdd7ad912ffcc1d6b329.avif);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
 }
 
 
@@ -148,4 +155,58 @@ nav > a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.contain_line {
+    width: 100%;
+    background-color: #030724;
+    position: absolute;
+    z-index: -2;
+}
+
+.accounts {
+    background-color: #232537;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.accounts::after, .accounts::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, gold);
+    top: 50%;
+    left: 50%;
+    translate: -50%  -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.accounts::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
 }

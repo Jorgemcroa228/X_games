@@ -19,9 +19,13 @@ const saveToLocalStorage = () => {
 button.addEventListener('click', saveToLocalStorage);
 
 button.addEventListener('click', function(){
-  button.textContent = 'Guardado';
+  button.textContent = 'Registrado';
   button.style.backgroundColor = 'red';
   button.disabled = true;
   button.style.borderBottom = '4px solid #6d0000';
+
+  setTimeout(() => {
+    window.location.href = "store.html";
+  }, 2000);
 })
 
