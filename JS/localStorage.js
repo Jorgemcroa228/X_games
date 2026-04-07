@@ -28,4 +28,3 @@ button.addEventListener('click', function(){
     window.location.href = "store.html";
   }, 2000);
 })
-
