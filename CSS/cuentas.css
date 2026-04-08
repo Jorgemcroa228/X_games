@@ -138,7 +138,7 @@ nav > a {
 }
 
 
-#enviar {
+.buy-btn {
   margin: 40px;
   padding: 9px 21px;
   font-size: 18px;
@@ -150,7 +150,7 @@ nav > a {
   box-shadow: 0 3px 3px  #000000;
 }
 
-#enviar:hover {
+.buy-btn:hover {
   transform: translateY(3px);
   box-shadow: none;
 }
@@ -164,57 +164,65 @@ nav > a {
 }
 
 .contain_line {
-    width: 100%;
-    background-color: #00000000;
-    position: absolute;
-    z-index: -2;
+  width: 100%;
+  background-color: #00000000;
+  position: absolute;
+  z-index: -2;
 }
 
 .accounts {
-    background-color: #232537;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    position: relative;
+  background-color: #232537;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
 }
 
 @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 .accounts::after, .accounts::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 70%, gold);
-    top: 50%;
-    left: 50%;
-    translate: -50%  -50%;
-    z-index: -1;
-    padding: 3px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 70%, gold);
+  top: 50%;
+  left: 50%;
+  translate: -50%  -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.acounts-color::after, .acounts-color::before {
+  background-image: conic-gradient(from var(--angle), transparent 70%, silver);
+}
+
+.acounts-colorD::after, .acounts-colorD::before {
+  background-image: conic-gradient(from var(--angle), transparent 70%, rgb(0, 187, 255));
 }
 
 .accounts::before {
-    filter: blur(1.5rem);
-    opacity: 0.5;
+  filter: blur(1.5rem);
+  opacity: 0.5;
 }
 
 @keyframes spin {
-    from {
-        --angle: 0deg;
-    }
+  from {
+    --angle: 0deg;
+  }
 
-    to {
-        --angle: 360deg;
-    }
+  to {
+    --angle: 360deg;
+  }
 }
 
 .slider {
@@ -248,13 +256,33 @@ nav > a {
 }
 
 .slider-btns {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    font-size: 3rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
+  margin-left: 180px;
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-btns:hover {
+  transition: 0.8s;
+}
+
+.next, .prev {
+  padding: 5px 14px;
+  color: #e0e0e0;
+  background-color: #0e1943c8;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px 4px rgb(38, 45, 96);
+}
+
+.next:hover, .prev:hover {
+  color: #182b77;
+  box-shadow: 1px 1px 3px 3px rgb(25, 30, 64) inset;
+  transition: 0.8s;
 }
 
 .slider a {
@@ -303,4 +331,8 @@ nav > a {
 .type_accountD {
   margin: 20px 0px;
   color: darkturquoise;
+}
+
+.buy-btn {
+  font-weight: bold;
 }

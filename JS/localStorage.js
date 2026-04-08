@@ -2,9 +2,10 @@ const d = document;
 
 const storageInputs = d.querySelectorAll('.storage');
 const button = d.querySelector('.enviar');
+const storage = window.sessionStorage;
 
 storageInputs.forEach((input, index) => {
-  const storedValue = localStorage.getItem(`textinput${index}`);
+  const storedValue = storage.getItem(`textinput${index}`);
   if (storedValue) {
     input.value = storedValue;
   }
@@ -12,9 +13,13 @@ storageInputs.forEach((input, index) => {
 
 const saveToLocalStorage = () => {
   storageInputs.forEach((input, index) => {
-    localStorage.setItem(`textinput${index}`, input.value);
+    storage.setItem(`textinput${index}`, input.value);
   });
 };
+
+if (!button) {
+  throw new Error('No se encontró el botón .enviar');
+}
 
 button.addEventListener('click', saveToLocalStorage);
 
